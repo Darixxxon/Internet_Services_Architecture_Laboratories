@@ -1,0 +1,50 @@
+### Get a bike by ID
+GET http://localhost:8080/bikes/91003fa3-1761-48ed-8a37-2d1ba58838f3
+Accept: application/json
+
+###
+
+### Create a new bike
+POST http://localhost:8080/bikes
+Content-Type: application/json
+
+{
+  "brand": "Trek",
+  "model": "FX 3",
+  "type": "Road",
+  "price": 799.99,
+  "shopUuid": "98dcb511-a33c-4625-956b-9893f0a5cb42"
+}
+
+###
+
+### Update a bike
+PUT http://localhost:8080/bikes/de86eb68-bbdb-40ea-8ba8-eeb5ba4f11a2
+Content-Type: application/json
+
+{
+  "brand": "Specialized",
+  "model": "Sirrus X 5.0",
+  "type": "MTB",
+  "price": 20.00,
+  "shopUuid": "1929979c-b8c3-464e-8c20-dbb7295ecee9"
+}
+
+###
+
+### Delete a bike by ID
+DELETE http://localhost:8080/bikes/{id}
+
+###
+
+### Get all bikes
+GET http://localhost:8080/bikes
+Accept: application/json
+
+###
+
+### Delete all bikes of a specific type
+DELETE http://localhost:8080/bikes/type/{type}
+Accept: application/json
+
+###
